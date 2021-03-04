@@ -20,13 +20,6 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
-            name='Role',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('RoleName', models.CharField(max_length=150)),
-            ],
-        ),
-        migrations.CreateModel(
             name='Status',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
@@ -41,7 +34,6 @@ class Migration(migrations.Migration):
                 ('Login', models.CharField(max_length=150)),
                 ('Email', models.CharField(max_length=150)),
                 ('Password', models.CharField(max_length=150)),
-                ('Role', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='orders.role', verbose_name='Роль')),
             ],
         ),
         migrations.CreateModel(
